@@ -1,4 +1,4 @@
-# Multithreading in C
+# Multithreading in C/C++
 (can be used in C++ too but instead of using 'gcc' for compiling, use 'g++')
 
 
@@ -43,7 +43,7 @@ ie: the point z should not be between x and y.
 ***************************************************************************************************************************
  
  
- ## 1. Using Single Thread
+ ## 1. Using a Single Thread
  
   FileName: singlethread_execution.c
   
@@ -68,6 +68,8 @@ ie: the point z should not be between x and y.
    Compile:
             GCC compiler: gcc pthread_multithreading.c -o pthread_multithreading -lpthread 
             
+   Note: It is mandatory to compile the file using _-lpthread_ as we are using the POSIX thread library, otherwise the compilation will give an error.
+            
    --> An executable file pthread_multithreading will be created.
       
    To execute the pthread_multithreading file
@@ -75,15 +77,19 @@ ie: the point z should not be between x and y.
    Execute: ./pthread_multithreading
     
     For the syntax of pthread_create() or pthread_join() refer Linux Programmers Manual
+    
+   The Order of the Output may not be in the same sequence but it will definitely give all the possibilities because the order would depend on the scheduling of the thread.
    
    
   ## 3. Using OpenMP
   
    OpenMP (Open Multi-Processing) is an application programming interface (API) that supports multi-platform shared memory multiprocessing programming in C, C++, and Fortran, on most platforms, instruction set architectures (ISA) and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, and Windows. It consists of a set of compiler directives, library routines, and environment variables that influence run-time behavior.
       
+   You might have noticed the changes that are required in the code to spawn threads using POSIX Thread Library. To overcome that a better option would be to use the OpenMP API.
+      
    Filename: openmp_multithreading.c
    
-   In your code, do not forget to #include<openmp.h> library
+   In your code, do not forget to #include<omp.h> library
    
    To Compile and Execute use the same commands as of Single Threads.
    
@@ -103,7 +109,7 @@ ie: the point z should not be between x and y.
   
   
   ## What is the need?
-   In the programs above it may not take much time with the given size of array. But try to increase the size of the array to 300 or 500 and then you will notice a significant difference in execution time.
+   In the programs above it may not take much time with the given size of array. But try to increase the size of the array to 3000 or 5000 and then you will notice a significant difference in execution time.
   
   This can also be tried on Multiplication of nxn matrices or any code that take lots of CPU time for calculations. It will definitely improve the performance.
   
