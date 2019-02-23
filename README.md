@@ -138,7 +138,7 @@ ie: the point z should not be between x and y.
    You will see something like this
    ![Alt text](https://github.com/samuelpio01/multithreading-in-c/blob/master/htop.png "htop command")
    
-   Since on my machine(CPU) has 8 cores we can see numbers between 1 to 8 which reqpresent the CPU core and along with it is the Utilization of CPU (in %).
+   Since on my machine(CPU) has 8 cores we can see numbers between 1 to 8 which represent the CPU core and along with it is the Utilization of CPU (in %).
    
    ****************************************************************************************************************************
    
