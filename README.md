@@ -1,13 +1,15 @@
-### Multithreading in C 
+__## Multithreading in C__ 
 (can be used in C++ too but instead of using 'gcc' for compiling, use 'g++')
 
 
-#Using multiple thread to complete a certain task to improve code efficiency.
+__Using multiple thread to complete a certain task to improve code efficiency.__
 
 ****************************************************************************************************************************
 
-Qn: Write a program to find points (x,y) in an array such that between no two points there exists another value 'z' in the array which falls between 'x' and 'y' (ie: the point z should not be between x and y --->  x<z>y  -- if x<y
-                                                                                     --->  x>z<y  -- if x>y    ).
+__Question: __
+
+Write a program to find points (x,y) in an array such that between no two points there exists another value 'z' in the array which falls between 'x' and 'y' (ie: the point z should not be between x and y --->  x<z>y  -- if x<y
+                                                                               --->  x>z<y  -- if x>y    )
   Print the value of the points (x,y) which have no values between them and the distance between them.
   
   eg: 
@@ -23,7 +25,7 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
 ***************************************************************************************************************************
  
  
- #1. Using Single Thread
+ __1. Using Single Thread__
  
   FileName: singlethread_execution.c
   To compile the pthread_multithreading.c file
@@ -35,7 +37,7 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
      Execute: ./pthread_multithreading
      
      
- #2. Using POSIX Thread Library (pthread)
+ __2. Using POSIX Thread Library (pthread)__
  
    FileName: pthread_multithreading.c
    To compile the pthread_multithreading.c file
@@ -49,7 +51,7 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
    For the syntax of pthread_create() or pthread_join() refer Linux Programmers Manual
    
    
-  #3. Using OpenMP
+  __3. Using OpenMP__
   
    OpenMP (Open Multi-Processing) is an application programming interface (API) that supports multi-platform shared memory multiprocessing programming in C, C++, and Fortran, on most platforms, instruction set architectures (ISA) and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, and Windows. It consists of a set of compiler directives, library routines, and environment variables that influence run-time behavior.
       
@@ -61,7 +63,7 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
    
    
 ****************************************************************************************************************************
-   #Whats the difference?
+   __Whats the difference?__
    
    There is a big difference when it comes to Performance which is counted in terms of Latency and Throughput.
     
@@ -74,7 +76,7 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
   eg: time ./pthread_multithreading
   
   
-  Why do we need to do this?
+  __Why do we need to do this?__
   -> In the programs above it may not take much time with the given size of array. But try to increase the size of the array to 300 or 500 and then you will notice a significant difference in execution time.
   
   This can also be tried on Multiplication of nxn matrices or any code that take lots of CPU time for calculations. It will definitely improve the performance.
