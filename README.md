@@ -1,4 +1,4 @@
-__## Multithreading in C__ 
+# Multithreading in C
 (can be used in C++ too but instead of using 'gcc' for compiling, use 'g++')
 
 
@@ -6,7 +6,7 @@ __Using multiple thread to complete a certain task to improve code efficiency.__
 
 ****************************************************************************************************************************
 
-__Question: __
+#### Question
 
 Write a program to find points (x,y) in an array such that between no two points there exists another value 'z' in the array which falls between 'x' and 'y' (ie: the point z should not be between x and y --->  x<z>y  -- if x<y
                                                                                --->  x>z<y  -- if x>y    )
@@ -25,7 +25,7 @@ Write a program to find points (x,y) in an array such that between no two points
 ***************************************************************************************************************************
  
  
- __1. Using Single Thread__
+ ## 1. Using Single Thread
  
   FileName: singlethread_execution.c
   To compile the pthread_multithreading.c file
@@ -37,7 +37,7 @@ Write a program to find points (x,y) in an array such that between no two points
      Execute: ./pthread_multithreading
      
      
- __2. Using POSIX Thread Library (pthread)__
+ ## 2. Using POSIX Thread Library (pthread)
  
    FileName: pthread_multithreading.c
    To compile the pthread_multithreading.c file
@@ -48,10 +48,10 @@ Write a program to find points (x,y) in an array such that between no two points
    To execute the pthread_multithreading file
     Execute: ./pthread_multithreading
     
-   For the syntax of pthread_create() or pthread_join() refer Linux Programmers Manual
+   > For the syntax of pthread_create() or pthread_join() refer Linux Programmers Manual
    
    
-  __3. Using OpenMP__
+  ## 3. Using OpenMP
   
    OpenMP (Open Multi-Processing) is an application programming interface (API) that supports multi-platform shared memory multiprocessing programming in C, C++, and Fortran, on most platforms, instruction set architectures (ISA) and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, and Windows. It consists of a set of compiler directives, library routines, and environment variables that influence run-time behavior.
       
@@ -63,7 +63,7 @@ Write a program to find points (x,y) in an array such that between no two points
    
    
 ****************************************************************************************************************************
-   __Whats the difference?__
+   ## Whats the difference?
    
    There is a big difference when it comes to Performance which is counted in terms of Latency and Throughput.
     
@@ -76,8 +76,8 @@ Write a program to find points (x,y) in an array such that between no two points
   eg: time ./pthread_multithreading
   
   
-  __Why do we need to do this?__
-  -> In the programs above it may not take much time with the given size of array. But try to increase the size of the array to 300 or 500 and then you will notice a significant difference in execution time.
+  ## What is the need?
+   In the programs above it may not take much time with the given size of array. But try to increase the size of the array to 300 or 500 and then you will notice a significant difference in execution time.
   
   This can also be tried on Multiplication of nxn matrices or any code that take lots of CPU time for calculations. It will definitely improve the performance.
    
