@@ -4,6 +4,8 @@
 
 __Using multiple thread to complete a certain task to improve code efficiency.__
 
+*This program is compiled and executed on CentOS system*
+
 ****************************************************************************************************************************
 
 #### Question
@@ -45,16 +47,16 @@ ie: the point z should not be between x and y.
  
   FileName: singlethread_execution.c
   
-  To compile the pthread_multithreading.c file
+  To compile the singlethread_execution.c file
   
    Compile:
-            GCC compiler: gcc pthread_multithreading.c -o pthread_multithreading
+            GCC compiler: gcc singlethread_execution.c -o singlethread_execution
             
    --> An executable file pthread_multithreading will be created.
       
-   To execute the pthread_multithreading file
+   To execute the singlethread_execution file
    
-   Execute: ./pthread_multithreading
+   Execute: ./singlethread_execution
      
      
  ## 2. Using POSIX Thread Library (pthread)
@@ -104,6 +106,39 @@ ie: the point z should not be between x and y.
    In the programs above it may not take much time with the given size of array. But try to increase the size of the array to 300 or 500 and then you will notice a significant difference in execution time.
   
   This can also be tried on Multiplication of nxn matrices or any code that take lots of CPU time for calculations. It will definitely improve the performance.
+  
+  ## To check number of CPU's and CPU threads and other CPU info
+   Use the command 
+   
+    lscpu
+    
+   ![Alt text](https://github.com/samuelpio01/multithreading-in-c/blob/master/lscpu.png "lscpu command")
+  
+  Number of Cores in your system (Shown by CPUS) = No of Sockets x No Cores per socket x No of Threads per Core
+  
+  ## To check utilization of CPU threads
+   Use the command *htop* in terminal.
+   
+   If htop is not installed on your Linux system then follow the instructions below
+   
+   __Installation of 'htop'__
+   
+   For RHEL, CentOS & Fedora Systems:
+   
+    sudo yum install htop
+    
+   For Debian Systems:
+   
+    sudo apt-get install htop
+    
+   Once htop is installed on your system you can simply run it with the command:
+    
+    htop
+   
+   You will see something like this
+   ![Alt text](https://github.com/samuelpio01/multithreading-in-c/blob/master/htop.png "htop command")
+   
+   Since on my machine(CPU) has 8 cores we can see numbers between 1 to 8 which reqpresent the CPU core and along with it is the Utilization of CPU (in %).
    
    ****************************************************************************************************************************
    
