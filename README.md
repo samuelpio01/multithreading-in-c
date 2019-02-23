@@ -1,4 +1,4 @@
-## Multithreading in C 
+### Multithreading in C 
 (can be used in C++ too but instead of using 'gcc' for compiling, use 'g++')
 
 
@@ -20,8 +20,8 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
           (5,7) or (7,5) = 2
           (7,10) or (10,7) = 3
           (1,2) or (2,1) = 1
-          
-          ***************************************************************************************************************************
+ 
+***************************************************************************************************************************
  
  
  #1. Using Single Thread
@@ -61,7 +61,7 @@ Qn: Write a program to find points (x,y) in an array such that between no two po
    To Compile and Execute use the same commands as of Single Threads.
    
    
-   ****************************************************************************************************************************
+****************************************************************************************************************************
    #Whats the difference?
    
    There is a big difference when it comes to Performance which is counted in terms of Latency and Throughput.
