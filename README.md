@@ -150,3 +150,4 @@ ie: the point z should not be between x and y.
    
    
    
+_This is how I have handled multithreading. I'm open to suggestions. Shoot in your questions or suggestions at __samuelpio01@gmail.com___
